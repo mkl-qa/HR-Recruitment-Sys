@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  dept: MyString
+  opennum: 1
+  description: MyText
+  requirement: MyText
+  user_id: 1
+
+two:
+  title: MyString
+  dept: MyString
+  opennum: 1
+  description: MyText
+  requirement: MyText
+  user_id: 1

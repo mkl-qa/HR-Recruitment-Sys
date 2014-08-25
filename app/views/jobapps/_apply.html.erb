@@ -1,0 +1,6 @@
+<%= form_for(current_user.relationships.build(jobapp_id: @jobapp.id)) do |f| %>
+<div>
+	<%= f.hidden_field :jobapp_id %>
+</div>
+<%= f.submit "apply", class: "btn btn-lg btn-default btn-block" %>
+<% end %>

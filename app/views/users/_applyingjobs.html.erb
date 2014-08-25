@@ -1,0 +1,30 @@
+<% if @jobapps && @jobapps.count > 0 %>
+<h1>All Jobs You are Applying</h1>
+
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Dept</th>
+			<th>Apply Date</th>
+			<th colspan="3">Action</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @jobapps.each do |jobapp| %>
+		<tr>
+			<td><%= link_to jobapp.title, jobapp %></td>
+			<td><%= jobapp.dept %></td>
+			<td><%= @user.relationships.find_by(jobapp_id: jobapp.id).updated_at %></td>
+			<td>
+					<%= link_to 'Show', jobapp %> | 
+					<%= link_to 'Delete', '#' %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<br>
+<% end %>
