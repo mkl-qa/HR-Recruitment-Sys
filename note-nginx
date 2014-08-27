@@ -1,0 +1,22 @@
+# how to install:
+https://github.com/ruby-china/ruby-china/wiki/Ubuntu-14.04-上使用-Nginx-Passenger-部署-Ruby-on-Rails
+
+sudo vim  /etc/nginx/sites-enabled/example.com.conf
+server {
+    listen 90 default;
+    server_name example.com; # 这里填写你真实域名
+    root /var/www/example.com/current/public;
+    passenger_enabled on;
+    ssl on;
+    ssl_certificate /etc/nginx/ssl/server.crt;
+    ssl_certificate_key /etc/nginx/ssl/server.key;
+}
+
+
+
+sudo vim /var/log/nginx/error.log
+
+sudo service nginx restart
+
+# how to create key
+https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04
