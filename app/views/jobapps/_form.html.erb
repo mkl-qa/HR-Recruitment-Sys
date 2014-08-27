@@ -1,0 +1,23 @@
+<%= bootstrap_form_for(@jobapp) do |f| %>
+	<%= f.alert_message "Please fix the errors below." %>
+	<%= f.error_summary %>
+	
+	<div class="field">
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.text_field :dept %>
+	</div>
+	<div class="field">
+		<%= f.number_field :num %>
+	</div>
+	<div class="field">
+		<%= f.text_area :description %>
+	</div>
+	<div class="field">
+		<%= f.text_area :requirement %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

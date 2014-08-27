@@ -1,0 +1,49 @@
+<% provide(:title, @jobapp.title) %>
+<div class="container">
+	<div class="blog-main blog-post">
+		<h1 class="blog-post-title"> <%= @jobapp.title %> </h2>
+		<% if current_user.applying?(@jobapp) %>
+		<blockquote>
+			<p style="color:red">
+				You have applied this job.
+				</style>
+			</p>
+		</blockquote> <% end %>
+		<p class="blog-post-meta">
+			Posted <%= time_ago_in_words(@jobapp.created_at) %> ago.
+		</p>
+		<p>
+			Department of <%= @jobapp.dept %>
+		</p>
+		<p>
+			Number: <%= @jobapp.num %>
+		</p> 
+		<% if !current_user.recruiter? && !current_user.applying?(@jobapp) %>
+				<%= render 'apply' %>
+		<% end %>
+		<% if current_user.recruiter? %>
+		<%= render 'stats'%>
+		<% end %>
+		<hr>
+		</hr> <h2>Job description</h2>
+		<p>
+			<%= simple_format(@jobapp.description) %>
+		</p>
+		<hr>
+		</hr><h2>Requirement</h2>
+		<p>
+			<%= simple_format(@jobapp.requirement)%>
+		</p>
+		<ul class="pager">
+			<% if can? :update, @jobapp%>
+			<li>
+				<%= link_to 'Edit', edit_jobapp_path(@jobapp) %>
+			</li>
+			<% end %>
+			
+			<li>
+				<%= link_to 'Back', jobapps_path %>
+			</li>
+		</ul>
+	</div>
+</div>

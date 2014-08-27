@@ -1,0 +1,88 @@
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>All Job List
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="clearfix">
+			<div class="btn-group">
+				<a href="<%= new_jobapp_path%>">
+				<button id="sample_editable_1_new" class="btn blue">
+					Add Job <i class="icon-plus-sign"></i>
+				</button> </a>
+				<a href="<%= new_jobapp_path%>">
+				<button id="sample_editable_1_new" class="btn red">
+					Add Job <i class="icon-plus-sign"></i>
+				</button> </a>
+			</div>
+		</div>
+
+		<table class="table table-striped table-bordered table-hover" id="sample_2">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Dept</th>
+					<th>Hire Num</th>
+					<th>Create Date</th>
+					<% if can? :update, Jobapp %>
+						<th>#Apply</th>
+					<% end %>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<% @jobapps.each do |jobapp| %>
+				<tr class="odd gradeX">
+					<td><%= link_to jobapp.title, jobapp %></td>
+					<td><%= jobapp.dept %></td>
+					<td><%= jobapp.num %></td>
+					<td><%= jobapp.created_at %></td>
+					<% if can? :update, jobapp %>
+					<td>
+						
+						<%= jobapp.users.count %>
+					</td>
+					<% end %>
+					<td>
+							<% if current_user && !current_user.recruiter? && !current_user.applying?(jobapp) %>
+							    <%= link_to 'Apply', jobapp %>
+							 <% end %>
+							<% if current_user && !current_user.recruiter? && current_user.applying?(jobapp) %>
+							    <p style="color:red">
+							    	Applied!
+							    </p>
+							<% end %>
+							
+							<% if can? :update, jobapp %>
+								<%= link_to 'Edit', edit_jobapp_path(jobapp), class: "btn blue" %>
+							<% end %>
+							<% if can? :destroy, jobapp %>
+								<%= link_to 'Destroy', jobapp, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn yellow" %>
+							<% end %>
+					</td>
+				</tr>
+				<% end %>
+
+			</tbody>
+
+		</table>
+
+	</div>
+</div>
+<br>
+
+<% if can? :new, Jobapp%>
+<ul class="pager">
+<li>
+<%= link_to 'New Job', new_jobapp_path %>
+</li>
+</ul>
+<% end %>

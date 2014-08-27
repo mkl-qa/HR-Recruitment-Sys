@@ -1,0 +1,39 @@
+ Sr. - Sr. Java Web Application Developer
+
+<h3>ROLE AND RESPONSIBILITIES</h3>
+Looking for an applications developer with experience in BI who is interested in working with the latest web and big data technologies. We are developing leading edge database marketing and analytic solutions in .Net, Java, Sql Server and Hadoop. We need smart, enthusiastic, driven individuals to build our team and produce world class solutions for our clients. Responsibilities include:
+<ul>
+<li>	Work with business users and other stakeholders to understand business processes, gather documentation and translate them into functional specifications </li>
+<li>	Create interactive, immersive websites to drive data exploration leveraging BI tools and 3rd party controls</li>
+<li>	Participate in the complete software product life cycle (SDLC) process as a principle developer.</li>
+<li>	Provide 3rd level production support and enhancement of products</li>
+</ul>
+<h3>QUALIFICATIONS</h3>
+Experience with object oriented system analysis/design, Java, SQL Server and Related development tools and environment is required.
+<ul>
+<li>	Must have very strong java programing background and foundation, include common-seen patterns and algorithm</li>
+<li>	Experience working under Linux environment</li>
+<li>	Experts on Java N tiers web application design by using mainstream frameworks, like spring, hibernate and at least one MVC framework</li>
+<li>	Experience integrating with 3rd party API by using REST and WebService</li>
+<li>	Good ability on database design, be familiar with SQL Server and MySql and having experiences to use ER data modeling software like Erwin or Power Designer</li>
+<li>	Exceptional skills in user experience design for web applications, be good at JQuery, and AngularJS is preferred.</li>
+<li>	Strong trouble shooting/problem solving capability</li>
+<li>	Self-starter, motivated and can work unsupervised</li>
+<li>	Structured, organized approach to product development and ability to deliver projects on time</li>
+<li>	Understanding and execution of standard product lifecycle (including requirement gathering, design, coding, testing, production turnover, documentation and postproduction support)</li>
+<li>	Ability to work in a rapidly changing business environment</li>
+<li>	Good communication skills, speaking and writing fluent English.</li>
+</ul>
+
+
+<h3>PREFERRED SKILLS</h3>
+<ul>
+<li>	Hadoop, Cloudera, experience with big data platforms a plus </li>
+<li>	Experience with Subversion, TFS, Jira, Redmine </li>
+<li>	Business Intelligence experience, creating solutions such as OLAP databases, reports, dashboards, and Scorecards</li>
+</ul>
+<h3>ADDITIONAL QUALIFICATIONS</h3>
+<ul>
+<li>	5+ years of professional work experience</li>
+<li>	Education: BS Computer Science or equivalent experience</li>
+</ul>

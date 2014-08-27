@@ -1,0 +1,41 @@
+<% if signed_in?%>
+<li class="dropdown user">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= gravatar_for current_user %> <span class="username"><%= current_user.name %></span> <i class="icon-angle-down"></i> </a>
+
+	<ul class="dropdown-menu">
+
+		<li>
+			<%= link_to raw("<i class=\"icon-user\"></i> My Profile"), current_user %>
+		</li>
+
+		<li>
+			<a href="page_calendar.html"><i class="icon-calendar"></i> (x)My Calendar</a>
+		</li>
+
+		<li>
+			<a href="inbox.html"><i class="icon-envelope"></i> (x) My Inbox(3)</a>
+		</li>
+
+		<li>
+			<a href="#"><i class="icon-tasks"></i> (x) My Tasks</a>
+		</li>
+
+		<li class="divider"></li>
+
+		<li>
+			<a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a>
+		</li>
+
+		<li>
+			<%= link_to raw("<i class=\"icon-key\"></i> Sign out"), signout_path, method: :delete %>
+		</li>
+
+	</ul>
+
+</li>
+<% else %>
+<li>
+	<%= link_to "Sign in", signin_path %>
+</li>
+<% end %>
+

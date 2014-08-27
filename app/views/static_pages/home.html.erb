@@ -1,0 +1,17 @@
+<div class="page-content">
+	<div class="container-fluid">
+		<!-- BEGIN PAGE CONTENT-->
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>Welcome to Merkle Inc.</h1>
+				<h2> Home page for the <a href="http://www.merkleinc.com/">Merkle Inc.</a> recruitment. </h2>
+				<% if !signed_in? %>
+				<%= link_to "Sign up today", signup_path, class: "btn blue" %>
+				<% end %>
+				<%= link_to "All Jobs here", jobapps_url, class: "btn blue" %>
+
+			</div>
+		</div>
+	</div>
+</div>
+
