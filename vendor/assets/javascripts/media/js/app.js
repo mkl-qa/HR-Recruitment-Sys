@@ -157,8 +157,8 @@ var App = function () {
     var handleSidebarMenu = function () {
         jQuery('.page-sidebar').on('click', 'li > a', function (e) {
                 if ($(this).next().hasClass('sub-menu') == false) {
-                    if ($('.btn-navbar').hasClass('collapsed') == false) {
-                        $('.btn-navbar').click();
+                    if ($('.navbar-btn').hasClass('collapsed') == false) {
+                        $('.navbar-btn').click();
                     }
                     return;
                 }

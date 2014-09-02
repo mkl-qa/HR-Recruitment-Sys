@@ -1,5 +1,5 @@
 class JobappsController < ApplicationController
-  # load_and_authorize_resource except: [:create]
+  load_and_authorize_resource except: [:create]
  
   # GET /jobapps
   # GET /jobapps.json

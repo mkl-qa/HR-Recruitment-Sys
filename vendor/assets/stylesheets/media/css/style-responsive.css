@@ -262,11 +262,11 @@ For tablets and phones
 	/***
 	Page sidebar
 	***/
-	.page-sidebar .btn-navbar.collapsed .arrow { 
+	.page-sidebar .navbar-btn.collapsed .arrow { 
 		display: none;
 	}	
 
-	.page-sidebar .btn-navbar .arrow {
+	.page-sidebar .navbar-btn .arrow {
 	  position: absolute;
 	  right: 25px;
 	  width: 0; 

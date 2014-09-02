@@ -351,7 +351,7 @@ Header and header elements.
   margin-left: 20px;
 }
 
-.header .btn-navbar {
+.header .navbar-btn {
   margin-bottom: 0px;
   padding-right: 0px;
   padding-top:10px;
@@ -363,7 +363,7 @@ Header and header elements.
   border: 0;
 }
 
-.header .btn-navbar:hover {
+.header .navbar-btn:hover {
   text-decoration: none;
 }
 

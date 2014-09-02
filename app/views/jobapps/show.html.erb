@@ -18,9 +18,14 @@
 		<p>
 			Number: <%= @jobapp.num %>
 		</p> 
-		<% if !current_user.recruiter? && !current_user.applying?(@jobapp) %>
+		<% if signed_in? && !current_user.recruiter? && !current_user.applying?(@jobapp) %>
 				<%= render 'apply' %>
 		<% end %>
+		<% if !signed_in? %>
+		<p>
+			Please <%= link_to "sign in", signin_path, class: "btn-xs btn-info" %> before applying.
+		</p>
+		<%end%>
 		<% if current_user.recruiter? %>
 		<%= render 'stats'%>
 		<% end %>
@@ -37,12 +42,12 @@
 		<ul class="pager">
 			<% if can? :update, @jobapp%>
 			<li>
-				<%= link_to 'Edit', edit_jobapp_path(@jobapp) %>
+				<%= link_to 'Edit', edit_jobapp_path(@jobapp), class: "btn blue" %>
 			</li>
 			<% end %>
 			
 			<li>
-				<%= link_to 'Back', jobapps_path %>
+				<%= link_to 'All Jobs', jobapps_path, class: "btn blue" %>
 			</li>
 		</ul>
 	</div>
