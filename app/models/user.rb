@@ -31,10 +31,10 @@ class User < ActiveRecord::Base
     end
 
   
-  validates :name, presence: true
+  validates :name, presence: true, length: { in: 4..20 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },uniqueness: true
-  
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
+  validates :password, length: { in: 6..20 }
   has_secure_password
   
   

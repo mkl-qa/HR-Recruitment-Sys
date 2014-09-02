@@ -12,14 +12,12 @@
 	<div class="portlet-body">
 		<div class="clearfix">
 			<div class="btn-group">
+				<% if current_user.recruiter? %>
 				<a href="<%= new_jobapp_path%>">
 				<button id="sample_editable_1_new" class="btn blue">
 					Add Job <i class="icon-plus-sign"></i>
 				</button> </a>
-				<a href="<%= new_jobapp_path%>">
-				<button id="sample_editable_1_new" class="btn red">
-					Add Job <i class="icon-plus-sign"></i>
-				</button> </a>
+				<% end %>
 			</div>
 		</div>
 
@@ -82,7 +80,7 @@
 <% if can? :new, Jobapp%>
 <ul class="pager">
 <li>
-<%= link_to 'New Job', new_jobapp_path %>
+<%= link_to 'New Job', new_jobapp_path ,class: "btn blue"%>
 </li>
 </ul>
 <% end %>
