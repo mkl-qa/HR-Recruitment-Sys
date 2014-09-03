@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+----------Params parent_code:<%= @data_dictionary.parent_code %>;end----------
+<p>
+  <strong>Name:</strong>
+  <%= @data_dictionary.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @data_dictionary.description %>
+</p>
+
+<p>
+  <strong>Parent code:</strong>
+  <%= @data_dictionary.parent_code %>
+</p>
+
+<p>
+  <strong>Del flg:</strong>
+  <%= @data_dictionary.del_flg %>
+</p>
+
+<%= link_to 'Edit', edit_data_dictionary_path(@data_dictionary) %> |
+<%= link_to 'Back', data_dictionaries_path( :dictid => @data_dictionary.parent_code) %>
