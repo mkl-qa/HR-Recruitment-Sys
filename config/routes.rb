@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'datadictionarylist/index'
+
+  resources :data_dictionaries
+
   resources :jobapps
 
   resources :users do

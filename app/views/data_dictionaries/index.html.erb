@@ -1,0 +1,33 @@
+<h1>Listing data_dictionaries</h1>
+----------Params Id:<%= @dict_id %>, Name:<%= @dict_name %>end----------
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Parent code</th>
+      <th>Del flg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_dictionaries.each do |data_dictionary| %>
+      <tr>
+        <td><%= data_dictionary.name %></td>
+        <td><%= data_dictionary.description %></td>
+        <td><%= data_dictionary.parent_code %></td>
+        <td><%= data_dictionary.del_flg %></td>
+        <td><%= link_to 'Show', data_dictionary %></td>
+        <td><%= link_to 'Edit', edit_data_dictionary_path(data_dictionary) %></td>
+        <td><%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data dictionary', new_data_dictionary_path(:idnew => @dict_id) %> | 
+<%= link_to 'Back to Dictionary List', { :controller => "datadictionarylist", :action => "index"} %>
