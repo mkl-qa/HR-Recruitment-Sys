@@ -16,7 +16,7 @@ Page header
   background-image: none !important;
   background-color: #434343 !important;
 }
-.header .btn-navbar {
+.header .navbar-btn {
   background-color: #434343 !important;
 }
 .header .nav .dropdown-toggle:hover,

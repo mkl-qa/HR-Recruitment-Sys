@@ -1,0 +1,43 @@
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>All Job List
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+
+	<div class="portlet-body">
+
+
+<!-- <p>Find me in app/views/datadictionarylist/index.html.erb</p> -->
+
+<table class="table table-striped table-bordered table-hover" id="sample_2">
+  <thead>
+    <tr>
+      <th style="border: solid black 1px">Name</th>
+      <th style="border: solid black 1px">Description</th>
+    </tr>
+  </thead>
+
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<% @data_dictionaries.each do |datadictionary| %>
+	<tr>
+		<td style="border: solid black 1px">
+			<%= link_to datadictionary.name, data_dictionaries_path(:dictid => datadictionary.parent_code, :dictname => datadictionary.name) %>
+		</td>	
+		<td style="border: solid black 1px"><%=sanitize datadictionary.description %></td>
+	</tr>
+<% end %>
+
+</table>
+
+</div>
+</div>

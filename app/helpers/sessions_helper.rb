@@ -23,7 +23,7 @@ module SessionsHelper
 
   # is this session belong to a logged in user?
   def signed_in?
-    !current_user.nil? && current_user.name
+    !current_user.nil? && current_user.name && current_user.email
   end
   
   def is_recruiter?
