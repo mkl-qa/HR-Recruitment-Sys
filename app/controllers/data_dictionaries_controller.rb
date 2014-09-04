@@ -48,7 +48,7 @@ class DataDictionariesController < ApplicationController
         format.json { render :show, status: :created, location: @data_dictionary }
         
       else
-        format.html { render :new }
+        format.html { render new_data_dictionary_path(:idnew => @data_dictionary.parent_code) }
         format.json { render json: @data_dictionary.errors, status: :unprocessable_entity }
       end
     end

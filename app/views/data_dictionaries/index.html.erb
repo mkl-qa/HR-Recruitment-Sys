@@ -19,9 +19,10 @@
         <td><%= data_dictionary.description %></td>
         <td><%= data_dictionary.parent_code %></td>
         <td><%= data_dictionary.del_flg %></td>
-        <td><%= link_to 'Show', data_dictionary, class: "btn blue" %>
+        <td>
         	<%= link_to 'Edit', edit_data_dictionary_path(data_dictionary), class: "btn blue" %> 
-        	<%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn yellow" %></td>
+        	<%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn yellow" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
