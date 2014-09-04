@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :data_dictionaries
 
+
   resources :jobapps
 
   resources :users do

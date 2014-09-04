@@ -12,12 +12,6 @@ class ApplicationController < ActionController::Base
     cookies.permanent[:diction_parent_id]
   end
   
-  def set_max_id(mid)
-    cookies.permanent[:diction_max_id] = mid
-  end
-  def get_max_id
-    cookies.permanent[:diction_max_id]
-  end  
   
 
 end

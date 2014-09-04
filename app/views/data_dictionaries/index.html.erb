@@ -1,7 +1,7 @@
 <h1>Listing data_dictionaries</h1>
 ----------Params Id:<%= @dict_id %>, Name:<%= @dict_name %>end----------
 
-<table>
+<table class="table table-striped table-bordered table-hover" id="sample_2">
   <thead>
     <tr>
       <th>Name</th>
@@ -19,9 +19,9 @@
         <td><%= data_dictionary.description %></td>
         <td><%= data_dictionary.parent_code %></td>
         <td><%= data_dictionary.del_flg %></td>
-        <td><%= link_to 'Show', data_dictionary %></td>
-        <td><%= link_to 'Edit', edit_data_dictionary_path(data_dictionary) %></td>
-        <td><%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', data_dictionary, class: "btn blue" %>
+        	<%= link_to 'Edit', edit_data_dictionary_path(data_dictionary), class: "btn blue" %> 
+        	<%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn yellow" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,5 +29,5 @@
 
 <br>
 
-<%= link_to 'New Data dictionary', new_data_dictionary_path(:idnew => @dict_id) %> | 
-<%= link_to 'Back to Dictionary List', { :controller => "datadictionarylist", :action => "index"} %>
+<%= link_to 'New Data dictionary', new_data_dictionary_path(:idnew => @dict_id), class: "btn blue" %>  
+<%= link_to 'Back to Dictionary List', { :controller => "datadictionarylist", :action => "index"}, class: "btn blue" %>
