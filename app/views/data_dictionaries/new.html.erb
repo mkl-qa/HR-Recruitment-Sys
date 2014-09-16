@@ -1,6 +1,24 @@
-<h1>New data_dictionary</h1>
-----------Params Id:<%= params[:idnew] %>end----------
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>New <%= params[:dictname] %>
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+
+	<div class="portlet-body">
+
+<!-- <h1>New data_dictionary</h1>
+----------Params Id:<%= params[:idnew] %>end---------- -->
 
 <%= render 'form' %>
 
-<!-- <%= link_to 'Back', data_dictionaries_path( :dictid => params[:idnew]) %> -->
+<div style="visibility: hidden">
+<%= link_to 'Back', data_dictionaries_path( :dictid => params[:idnew]) %>
+</div>
+</div>
+</div>

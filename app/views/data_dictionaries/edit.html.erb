@@ -1,6 +1,26 @@
-<h1>Editing data_dictionary</h1>
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>Editing <%= params[:dictname] %>
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+
+	<div class="portlet-body">
+
+
+<!-- <h1>Editing data_dictionary</h1> -->
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @data_dictionary %> |
-<%= link_to 'Back', data_dictionaries_path( :dictid => @data_dictionary.parent_code ) %>
+<!-- <%= link_to 'Show', @data_dictionary %> | -->
+<div >
+   <%= link_to 'Cancel', data_dictionaries_path( :dictid => @data_dictionary.parent_code, :dictname => params[:dictname] ), class: "btn blue" %>
+</div>
+</div>
+</div>
+

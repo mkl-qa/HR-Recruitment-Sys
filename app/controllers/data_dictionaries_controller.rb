@@ -44,7 +44,7 @@ class DataDictionariesController < ApplicationController
           # lastupd.update_columns( :parent_code => get_parent_id, :del_flg => 0 )
         # end
         # format.html { redirect_to :partial => "show", :object => @data_dictionary , notice: 'Data dictionary was successfully created.' }
-        format.html { redirect_to @data_dictionary, notice: 'Data dictionary was successfully created.' }
+        format.html { redirect_to @data_dictionary }
         format.json { render :show, status: :created, location: @data_dictionary }
         
       else
@@ -59,7 +59,7 @@ class DataDictionariesController < ApplicationController
   def update
     respond_to do |format|
       if @data_dictionary.update(data_dictionary_params)
-        format.html { redirect_to @data_dictionary, notice: 'Data dictionary was successfully updated.' }
+        format.html { redirect_to @data_dictionary }
         format.json { render :show, status: :ok, location: @data_dictionary }
       else
         format.html { render :edit }
