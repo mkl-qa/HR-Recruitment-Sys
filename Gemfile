@@ -39,7 +39,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
-gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'bcrypt'
 

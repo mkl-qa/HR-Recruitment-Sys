@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/newjob',  to: 'jobapps#new',          via: 'get'
 
   match '/help',    to: 'static_pages#help',    via: 'get'
