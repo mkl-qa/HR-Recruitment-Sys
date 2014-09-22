@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905061000) do
+ActiveRecord::Schema.define(version: 20140912030837) do
 
   create_table "data_dictionaries", force: true do |t|
     t.string   "name"
