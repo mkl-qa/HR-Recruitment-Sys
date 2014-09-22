@@ -1,0 +1,61 @@
+
+
+<h1>Listing merkle_users</h1>
+
+
+<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>User psd</th>
+      <th>Eng name</th>
+      <th>Chn name</th>
+      <th>Email</th>
+      <th>Bu</th>
+      <th>Location</th>
+      <th>Mgr</th>
+      <th>Position title</th>
+      <th>User role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merkle_users.each do |merkle_user| %>
+      <tr>
+        <td><%= merkle_user.user_name %></td>
+        <td><%= merkle_user.user_psd %></td>
+        <td><%= merkle_user.eng_name %></td>
+        <td><%= merkle_user.chn_name %></td>
+        <td><%= merkle_user.email %></td>
+        <td><%= merkle_user.bu %></td>
+        <td><%= merkle_user.location %></td>
+        <td><%= merkle_user.mgr %></td>
+        <td><%= merkle_user.position_title %></td>
+        <td><%= merkle_user.user_role %></td>
+        
+        <!-- <script type="text/javascript">
+        	window.onload = function(){
+        		alert("test1");
+        		var test1 = document.getElementsByTagName("input").value;
+        		alert(test1);
+        	}
+        </script> -->
+        <!-- <td><%= link_to 'Show', merkle_user %></td> -->
+        <!-- <td><%= link_to 'Edit', edit_merkle_user_path(merkle_user) %></td> -->
+        <td><a class="edit" href="<%= merkle_user.update_columns( :user_role => 333) %>" remote="true">Edit</a></td>
+        <td> <%= link_to 'Destroy', merkle_user, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+<%= link_to 'New Merkle user', new_merkle_user_path %>
+
+
+

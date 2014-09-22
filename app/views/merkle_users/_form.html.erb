@@ -1,0 +1,57 @@
+<%= form_for(@merkle_user) do |f| %>
+  <% if @merkle_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merkle_user.errors.count, "error") %> prohibited this merkle_user from being saved:</h2>
+
+      <ul>
+      <% @merkle_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_psd %><br>
+    <%= f.text_field :user_psd %>
+  </div>
+  <div class="field">
+    <%= f.label :eng_name %><br>
+    <%= f.text_field :eng_name %>
+  </div>
+  <div class="field">
+    <%= f.label :chn_name %><br>
+    <%= f.text_field :chn_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :bu %><br>
+    <%= f.text_field :bu %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :mgr %><br>
+    <%= f.text_field :mgr %>
+  </div>
+  <div class="field">
+    <%= f.label :position_title %><br>
+    <%= f.text_field :position_title %>
+  </div>
+  <div class="field">
+    <%= f.label :user_role %><br>
+    <%= f.text_field :user_role %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

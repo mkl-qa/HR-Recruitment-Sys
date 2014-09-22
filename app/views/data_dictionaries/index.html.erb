@@ -1,13 +1,27 @@
-<h1>Listing data_dictionaries</h1>
-----------Params Id:<%= @dict_id %>, Name:<%= @dict_name %>end----------
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>Listing <%= @dict_name %>
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+
+	<div class="portlet-body">
+
+<!-- <h1>Listing <%= @dict_name %></h1> -->
+<!-- ----------Params Id:<%= @dict_id %>, Name:<%= @dict_name %>end---------- -->
 
 <table class="table table-striped table-bordered table-hover" id="sample_2">
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Parent code</th>
-      <th>Del flg</th>
+      <!-- <th>Parent code</th>
+      <th>Del flg</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +31,12 @@
       <tr>
         <td><%= data_dictionary.name %></td>
         <td><%= data_dictionary.description %></td>
-        <td><%= data_dictionary.parent_code %></td>
-        <td><%= data_dictionary.del_flg %></td>
-        <td><%= link_to 'Show', data_dictionary, class: "btn blue" %>
-        	<%= link_to 'Edit', edit_data_dictionary_path(data_dictionary), class: "btn blue" %> 
-        	<%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn yellow" %></td>
+        <!-- <td><%= data_dictionary.parent_code %></td>
+        <td><%= data_dictionary.del_flg %></td> -->
+        <td>
+        	<%= link_to 'Edit', edit_data_dictionary_path(data_dictionary, :dictname => @dict_name) %> |
+        	<%= link_to 'Destroy', data_dictionary, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -29,5 +44,8 @@
 
 <br>
 
-<%= link_to 'New Data dictionary', new_data_dictionary_path(:idnew => @dict_id), class: "btn blue" %>  
-<%= link_to 'Back to Dictionary List', { :controller => "datadictionarylist", :action => "index"}, class: "btn blue" %>
+<%= link_to 'New', new_data_dictionary_path(:idnew => @dict_id, :dictname => @dict_name), class: "btn blue" %>  
+<%= link_to 'Back', { :controller => "datadictionarylist", :action => "index"}, class: "btn blue" %>
+
+</div>
+</div>

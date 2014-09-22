@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :merkle_users
+  
   get 'datadictionarylist/index'
 
   resources :data_dictionaries
