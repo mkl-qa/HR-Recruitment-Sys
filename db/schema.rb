@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903055543) do
+ActiveRecord::Schema.define(version: 20140905061000) do
 
   create_table "data_dictionaries", force: true do |t|
     t.string   "name"
@@ -41,6 +41,21 @@ ActiveRecord::Schema.define(version: 20140903055543) do
     t.integer  "num"
     t.text     "description"
     t.text     "requirement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merkle_users", force: true do |t|
+    t.string   "user_name"
+    t.string   "user_psd"
+    t.string   "eng_name"
+    t.string   "chn_name"
+    t.string   "email"
+    t.string   "bu"
+    t.string   "location"
+    t.string   "mgr"
+    t.string   "position_title"
+    t.string   "user_role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
