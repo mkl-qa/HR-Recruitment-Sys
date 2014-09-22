@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905061000) do
+ActiveRecord::Schema.define(version: 20140912030837) do
 
   create_table "data_dictionaries", force: true do |t|
     t.string   "name"
@@ -79,6 +79,33 @@ ActiveRecord::Schema.define(version: 20140905061000) do
   add_index "relationships", ["jobapp_id"], name: "index_relationships_on_jobapp_id"
   add_index "relationships", ["user_id", "jobapp_id"], name: "index_relationships_on_user_id_and_jobapp_id", unique: true
   add_index "relationships", ["user_id"], name: "index_relationships_on_user_id"
+
+  create_table "requisitions", force: true do |t|
+    t.string   "Req_ID"
+    t.string   "Req_NO"
+    t.string   "Position_title"
+    t.string   "priority"
+    t.string   "job_category"
+    t.string   "OG"
+    t.string   "Position_Level"
+    t.string   "Location"
+    t.integer  "Openings"
+    t.string   "Account_information"
+    t.string   "hiring_mgr"
+    t.date     "job_posting_date"
+    t.string   "approved_in_RMO_or_Not"
+    t.date     "RMO_Open_Date"
+    t.date     "preferred_onboard_date"
+    t.string   "Biz_impact_details"
+    t.string   "key_words"
+    t.string   "cahnnel"
+    t.string   "status"
+    t.string   "open_to_candidate"
+    t.string   "job_description"
+    t.string   "desired_skills_and_experience"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

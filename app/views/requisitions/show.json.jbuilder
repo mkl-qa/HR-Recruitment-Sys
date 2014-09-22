@@ -1,0 +1,2 @@
+json.extract! @requisition, :id, :Req_ID, :Req_NO :Position_title, :priority, :job_category, :OG, :Position_Level, :Location, :Openings, :Account_information, :hiring_mgr, :job_posting_date, 
+                                          :approved_in_RMO_or_Not, :RMO_Open_Date, :preferred_onboard_date, :Biz_impact_details, :key_words, :cahnnel, :status, :open_to_candidate, :job_description, :desired_skills_and_experience, :created_at, :updated_at

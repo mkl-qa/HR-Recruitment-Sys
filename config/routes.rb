@@ -2,10 +2,12 @@ Rails.application.routes.draw do
 
   resources :merkle_users
   
+  get 'requisitions/clone'
   get 'datadictionarylist/index'
 
   resources :data_dictionaries
-
+  
+  resources :requisitions
 
   resources :jobapps
 
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/dict_og', to: 'static_pages#table_managed_hr_data_dict_OG', via: 'get'
 
+  match 'clone', to: 'requisitions#clone', via: 'get'
 # The priority is based upon order of creation: first created -> highest priority.
 # See how all your routes lay out with "rake routes".
 
