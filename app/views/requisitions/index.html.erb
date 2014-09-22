@@ -1,0 +1,54 @@
+<div class="portlet box yellow">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="ico-table"></i>Requisition List
+		</div>
+		<div class="tools">
+			<a href="javascript:;" class="collapse"></a>
+			<a href="javascript:;" class="reload"></a>
+			<a href="javascript:;" class="remove"></a>
+		</div>
+	</div>
+
+	<div class="portlet-body">
+
+ <table class="table table-striped table-bordered table-hover" id="sample_2">
+  <thead>
+    <tr>
+      <th> req_id</th>
+      <th> req_NO</th>
+      <th>Position Title</th>
+      <th>Priority</th>
+      <th> OG</th>
+      <th>Location</th>
+      <th>Openings</th>
+      <th>Hiring Mgr.</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requisitions.each do |requisition| %>
+      <tr>
+        <td><%=requisition.Req_ID  %></td>
+        <td><%=requisition.Req_NO  %></td>
+        <td><%=requisition.Position_title  %></td>
+        <td><%=requisition.priority  %></td>
+        <td><%=requisition.OG  %></td>
+        <td><%=requisition.Location  %></td>
+        <td><%=requisition.Openings  %></td>
+        <td><%=requisition.hiring_mgr  %></td>
+        <td><%= link_to 'Show', requisition %></td>
+        <td><%= link_to 'Edit', edit_requisition_path(requisition) %></td>
+        <td><%= link_to 'Destroy', requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Clone', clone_path(:id => requisition.id ) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br> 
+
+<%= link_to 'New Requisition', new_requisition_path, class: "btn blue" %>
+</div>
+</div>

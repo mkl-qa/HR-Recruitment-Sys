@@ -49,3 +49,5 @@ gem 'faker'
 gem 'bootstrap-will_paginate', :git => 'https://github.com/yrgoldteeth/bootstrap-will_paginate'
 
 gem 'cancan'
+
+gem 'bootstrap-sass'
