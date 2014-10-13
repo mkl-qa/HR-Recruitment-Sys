@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     # @jobapps = @user.applied_jobapps.paginate(page: params[:page])
     # render 'show_applying'
   end
-  
+ 
   def new
   end
 
