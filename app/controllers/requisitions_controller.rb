@@ -4,9 +4,17 @@ class RequisitionsController < ApplicationController
   def index
     @requisitions=Requisition.all
   end
+  
   def new
-    @requisition=Requisition.new
-  end
+    @requisition_temp1=Requisition.order("Req_ID DESC").first
+    
+    if @requisition_temp1.nil?
+      @requisition=Requisition.new(:Req_ID => 1)
+    else
+      @new_ID=Integer(@requisition_temp1.Req_ID)+1
+      @requisition=Requisition.new(:Req_ID => @new_ID)
+    end   
+ end
   
   def show
   end
@@ -17,7 +25,7 @@ class RequisitionsController < ApplicationController
   def clone
     @requisition_temp1 = Requisition.find(params[:id])
     
-    @requisition_temp2 = Requisition.order("Req_NO DESC").first
+    @requisition_temp2 = Requisition.order("Req_ID DESC").first
     @requisition_new_ReqID = Integer(@requisition_temp2.Req_ID)+1
     
     @requisition=Requisition.new(:Req_ID =>@requisition_new_ReqID, :Req_NO =>@requisition_temp1.Req_NO, :Position_title =>@requisition_temp1.Position_title, 

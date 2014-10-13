@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    
+
   end
   
   # this is called from form_for session_path in new.html.erb
